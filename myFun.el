@@ -51,4 +51,16 @@
     
   
 
+(defun mycopyline ()
+  (interactive)
+  (setq pos (point))
+  (beginning-of-line)
+  (set 'bi (point))
+  (end-of-line)
+  (set 'ei (point))
+  (copy-region-as-kill bi (+ ei))
+  (goto-char pos)
+)
+
+
 
